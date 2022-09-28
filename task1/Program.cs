@@ -8,4 +8,15 @@ for(int i = 0; i < array.Length;i++)
 {
     if(array[i].Length <= necessaryLength) count++;
 }
-
+string[] newArray = new string[count];
+int j = 0;
+for(int i = 0; i < array.Length;i++)
+{
+    if(array[i].Length <= necessaryLength) 
+    {
+        newArray[j] = array[i];
+        j++;
+    }
+}
+Console.WriteLine(string.Join(",",array));
+Console.Write(string.Join(",",newArray));
